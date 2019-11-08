@@ -464,9 +464,12 @@ typedef NS_ENUM(NSInteger, RepeatInterval) {
     NSNumber *presentAlertValue = (NSNumber*)notification.request.content.userInfo[PRESENT_ALERT];
     NSNumber *presentSoundValue = (NSNumber*)notification.request.content.userInfo[PRESENT_SOUND];
     NSNumber *presentBadgeValue = (NSNumber*)notification.request.content.userInfo[PRESENT_BADGE];
-    bool presentAlert = [presentAlertValue boolValue];
-    bool presentSound = [presentSoundValue boolValue];
-    bool presentBadge = [presentBadgeValue boolValue];
+    bool presentAlert = true;
+    bool presentSound = true;
+    bool presentBadge = true;
+//     bool presentAlert = [presentAlertValue boolValue];
+//     bool presentSound = [presentSoundValue boolValue];
+//     bool presentBadge = [presentBadgeValue boolValue];
     if(presentAlert) {
         presentationOptions |= UNNotificationPresentationOptionAlert;
     }
